@@ -4,7 +4,14 @@ var app = new Vue({
     product: "chicken and waffles",
     image: "src/assets/chicken.jpg",
     link: "https://www.roscoeschickenandwaffles.com/our-menu",
-    inventory: 10,
-    onSale: true
+    inStock: true,
+    details: ["big drip", "duhboy"],
+    cart: 0
+  },
+  methods: {
+    addToCart: function() {
+      // this refers to cart above 
+      this.cart += 1
+    }
   }
 });
