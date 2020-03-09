@@ -4,6 +4,7 @@ var app = new Vue({
     product: "chicken and waffles",
     image: "src/assets/chicken.jpg",
     link: "https://www.roscoeschickenandwaffles.com/our-menu",
-    inventory: 10
+    inventory: 10,
+    onSale: true
   }
 });
