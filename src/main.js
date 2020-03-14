@@ -1,17 +1,33 @@
 var app = new Vue({
   el: "#app",
   data: {
-    product: "chicken and waffles",
-    image: "src/assets/chicken.jpg",
-    link: "https://www.roscoeschickenandwaffles.com/our-menu",
+    product: "Socks",
+    image:
+      "https://www.vuemastery.com/images/challenges/vmSocks-green-onWhite.jpg",
     inStock: true,
-    details: ["big drip", "duhboy"],
+    details: ["80% cotton", "20% polyester", "Gender-neutral"],
+    variants: [
+      {
+        variantId: 2234,
+        variantColor: "green",
+        variantImage:
+          "https://www.vuemastery.com/images/challenges/vmSocks-green-onWhite.jpg"
+      },
+      {
+        variantId: 2235,
+        variantColor: "blue",
+        variantImage:
+          "https://www.vuemastery.com/images/challenges/vmSocks-blue-onWhite.jpg"
+      }
+    ],
     cart: 0
   },
   methods: {
-    addToCart: function() {
-      // this refers to cart above 
-      this.cart += 1
+    addToCart() {
+      this.cart += 1;
+    },
+    updateProduct(variantImage) {
+      this.image = variantImage;
     }
   }
 });
